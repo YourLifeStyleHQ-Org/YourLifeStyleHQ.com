@@ -3,14 +3,14 @@
  * @version 1.3.4
  *
  * Date formatter utility library that allows formatting date/time variables or Date objects using PHP DateTime format.
- * @see http://php.net/manual/en/function.date.php
+ * @see https://php.net/manual/en/function.date.php
  *
- * For more JQuery plugins visit http://plugins.krajee.com
- * For more Yii related demos visit http://demos.krajee.com
+ * For more JQuery plugins visit https://plugins.krajee.com
+ * For more Yii related demos visit https://demos.krajee.com
  */
 /*
  jQuery DateTimePicker
- @homepage http://xdsoft.net/jqplugins/datetimepicker/
+ @homepage https://xdsoft.net/jqplugins/datetimepicker/
  @author Chupurnov Valeriy (<chupurnov@gmail.com>)
 */
 var DateFormatter;
@@ -86,7 +86,7 @@ b.getMilliseconds()))):a.defaultDate&&(b=k.strToDateTime(a.defaultDate),a.defaul
 r){b="string"===typeof b||b instanceof String?a.ownerDocument.getElementById(b):b;if(!b)return!1;if(b.createTextRange){var c=b.createTextRange();c.collapse(!0);c.moveEnd("character",r);c.moveStart("character",r);c.select();return!0}return b.setSelectionRange?(b.setSelectionRange(r,r),!0):!1};a.mask&&d.off("keydown.xdsoft");!0===a.mask&&(a.mask=e.formatMask?e.formatMask(a.format):a.format.replace(/Y/g,"9999").replace(/F/g,"9999").replace(/m/g,"19").replace(/d/g,"39").replace(/H/g,"29").replace(/i/g,
 "59").replace(/s/g,"59"));"string"===b.type(a.mask)&&(r(a.mask,d.val())||(d.val(a.mask.replace(/[0-9]/g,"_")),c(d[0],0)),d.on("paste.xdsoft",function(e){var h=(e.clipboardData||e.originalEvent.clipboardData||window.clipboardData).getData("text"),k=this.value,f=this.selectionStart,l=k.substr(0,f),k=k.substr(f+h.length),k=l+h+k,f=f+h.length;r(a.mask,k)?(this.value=k,c(this,f)):""===b.trim(k)?this.value=a.mask.replace(/[0-9]/g,"_"):d.trigger("error_input.xdsoft");e.preventDefault();return!1}),d.on("keydown.xdsoft",
 function(e){var h=this.value,k=e.which,f=this.selectionStart,m=this.selectionEnd,n=f!==m,t;if(48<=k&&57>=k||96<=k&&105>=k||8===k||46===k){t=8===k||46===k?"_":String.fromCharCode(96<=k&&105>=k?k-48:k);for(8===k&&f&&!n&&--f;;){var p=a.mask.substr(f,1),u=f<a.mask.length,q=0<f;if(!(/[^0-9_]/.test(p)&&u&&q))break;f+=8!==k||n?1:-1}e.metaKey&&(f=0,n=!0);if(n){var n=m-f,A=a.mask.replace(/[0-9]/g,"_"),p=A.substr(f,n).substr(1),m=h.substr(0,f);t+=p;h=h.substr(f+n)}else m=h.substr(0,f),h=h.substr(f+1);h=m+t+
-h;if(""===b.trim(h))h=A;else if(f===a.mask.length)return e.preventDefault(),!1;for(f+=8===k?0:1;/[^0-9_]/.test(a.mask.substr(f,1))&&f<a.mask.length&&0<f;)f+=8===k?0:1;r(a.mask,h)?(this.value=h,c(this,f)):""===b.trim(h)?this.value=a.mask.replace(/[0-9]/g,"_"):d.trigger("error_input.xdsoft")}else if(-1!==[65,67,86,90,89].indexOf(k)&&l||-1!==[27,38,40,37,39,116,17,9,13].indexOf(k))return!0;e.preventDefault();return!1}))}var h=b('<div class="xdsoft_datetimepicker xdsoft_noselect"></div>'),n=b('<div class="xdsoft_copyright"><a target="_blank" href="http://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
+h;if(""===b.trim(h))h=A;else if(f===a.mask.length)return e.preventDefault(),!1;for(f+=8===k?0:1;/[^0-9_]/.test(a.mask.substr(f,1))&&f<a.mask.length&&0<f;)f+=8===k?0:1;r(a.mask,h)?(this.value=h,c(this,f)):""===b.trim(h)?this.value=a.mask.replace(/[0-9]/g,"_"):d.trigger("error_input.xdsoft")}else if(-1!==[65,67,86,90,89].indexOf(k)&&l||-1!==[27,38,40,37,39,116,17,9,13].indexOf(k))return!0;e.preventDefault();return!1}))}var h=b('<div class="xdsoft_datetimepicker xdsoft_noselect"></div>'),n=b('<div class="xdsoft_copyright"><a target="_blank" href="https://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
 u=b('<div class="xdsoft_datepicker active"></div>'),t=b('<div class="xdsoft_monthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button><div class="xdsoft_label xdsoft_month"><span></span><i></i></div><div class="xdsoft_label xdsoft_year"><span></span><i></i></div><button type="button" class="xdsoft_next"></button></div>'),A=b('<div class="xdsoft_calendar"></div>'),v=b('<div class="xdsoft_timepicker active"><button type="button" class="xdsoft_prev"></button><div class="xdsoft_time_box"></div><button type="button" class="xdsoft_next"></button></div>'),
 q=v.find(".xdsoft_time_box").eq(0),y=b('<div class="xdsoft_time_variant"></div>'),B=b('<button type="button" class="xdsoft_save_selected blue-gradient-button">Save Selected</button>'),H=b('<div class="xdsoft_select xdsoft_monthselect"><div></div></div>'),R=b('<div class="xdsoft_select xdsoft_yearselect"><div></div></div>'),I=!1,S,G,E,J,T=0,k,U;a.id&&h.attr("id",a.id);a.style&&h.attr("style",a.style);a.weeks&&h.addClass("xdsoft_showweeks");a.rtl&&h.addClass("xdsoft_rtl");h.addClass("xdsoft_"+a.theme);
 h.addClass(a.className);t.find(".xdsoft_month span").after(H);t.find(".xdsoft_year span").after(R);t.find(".xdsoft_month,.xdsoft_year").on("touchstart mousedown.xdsoft",function(g){var r=b(this).find(".xdsoft_select").eq(0),c=0,d=0,e=r.is(":visible"),h;t.find(".xdsoft_select").hide();k.currentTime&&(c=k.currentTime[b(this).hasClass("xdsoft_month")?"getMonth":"getFullYear"]());r[e?"hide":"show"]();e=r.find("div.xdsoft_option");for(h=0;h<e.length&&e.eq(h).data("value")!==c;h+=1)d+=e[0].offsetHeight;
